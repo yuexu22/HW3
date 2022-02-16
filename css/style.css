@@ -119,20 +119,23 @@ nav a:focus{
 /* Requirements 6-10 here: */
 
 .intro{
-  background-image:url(../images/header.jpg);
-  background-attachment: initial;
-  background-color: #707070;
-  background-position:center;
+  background-image:url(../images/header.jpg) ;
   background-attachment: fixed;
+  background-position:center;
+  
   min-height: 400px;
   background-size: cover;
+  background-color: #707070;
+
 }
 .about,.clients,.method,.contact{
   grid-column: 2;
 }
+
 img{
   width:100%;
 }
+
 .about-image, .clients-image, .method-image,.contact-image{
 max-height: 500px;
 grid-column: 1/-1;
