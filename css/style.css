@@ -43,16 +43,10 @@ nav ul{
 nav li{
   display: inline;
   margin-right: 5%;
- 
 
 }
 
-nav li:hover{
-  display: none;
-  margin-right: 5%;
-  
 
-}
 header p{
   color: white;
   font-size: 24px;
@@ -80,19 +74,20 @@ footer a:visited{
 /*****  End Starter Code ****/
 
 /* Requirement 1 code here*/
-nav a{
+nav li a{
   text-decoration: none;
 }
 
 /* Requirement 2 code here*/
-nav a:hover{
+nav li a:hover{
   text-decoration: underline wavy;
+
   
 }
 
 
 
-a.skip{
+ .skip{
   background: white;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
@@ -106,7 +101,7 @@ a.skip{
 
 /* Requirement 4 code here*/
 
-nav a:focus{
+a:focus{
   border-top: 2px yellow solid;
 }
 .container{
@@ -119,17 +114,19 @@ nav a:focus{
 /* Requirements 6-10 here: */
 
 .intro{
-  background-image:url(../images/header.jpg) ;
+  background-color: #707070;
+  background-image:url('../images/header.jpg');
   background-attachment: fixed;
   background-position:center;
-  
+  height: 100%;
   min-height: 400px;
   background-size: cover;
-  background-color: #707070;
+  
+  background-repeat: no-repeat;
 
 }
 .about,.clients,.method,.contact{
-  grid-column: 2;
+  grid-column: 2/3;
 }
 
 img{
@@ -137,21 +134,22 @@ img{
 }
 
 .about-image, .clients-image, .method-image,.contact-image{
-max-height: 500px;
+
 grid-column: 1/-1;
+max-height: 500px;
 overflow: hidden;
 }
 .about,.about-image{
-  grid-row: 1;
+  grid-row: 1/2;
 }
 .clients,.clients-image{
-  grid-row: 2;
+  grid-row: 2/3;
 }
 .method,.method-image{
-  grid-row: 3;
+  grid-row: 3/4;
 }
 .contact,.contact-image{
-  grid-row: 4;
+  grid-row: 4/5;
 }
 .text{
   align-self: center;
@@ -173,14 +171,14 @@ overflow: hidden;
 
   
   /* Requirements 12-15 here: */
-a.skip:focus{
-  margin-left: 0;
-  margin-top: 20px;
-  position:absolute;
+.skip:focus{
+  left: 0px;
+  top: 20px;
+  position: absolute;
 }
 
 .container{
-  grid-template-columns: 50px auto 500px auto 50px ;
+  grid-template-columns: 50px auto 500px auto 50px;
   grid-template-rows: 300px 300px 300px 300px;
   display: grid;
 
@@ -189,7 +187,8 @@ a.skip:focus{
   grid-column: 3/span 2;
 }
 .clients, .contact, .about-image, .method-image{
-  grid-column: 2/span 2;}
+  grid-column: 2/span 2;
+}
 
 }
 
